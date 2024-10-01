@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <React_Assignment></React_Assignment>
+    <React_Assignment />
     </>
   )
 }

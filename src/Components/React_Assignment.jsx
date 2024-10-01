@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 const React_Assignment = () => {
     return (
         <div>
@@ -97,6 +99,7 @@ const React_Assignment = () => {
           className=" bg-blue-500 text-white p-3 rounded-md mt-6 hover:bg-blue-600 transition"
         >
           Send Inquiry
+          
         </button>
       </form>
     </div>
