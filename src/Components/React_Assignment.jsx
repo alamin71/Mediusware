@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { FaGooglePlay } from "react-icons/fa";
 import { GrAttachment } from "react-icons/gr";
 
 const React_Assignment = () => {
+  const fileInputRef = useRef(null);
+
+  // Function to trigger file input click
+  const handleButtonClick = () => {
+    fileInputRef.current.click();
+  };
+
+  // Function to handle file selection
+  const handleFileChange = (e) => {
+    const file = e.target.files[0]; // Get the first selected file
+    if (file) {
+      console.log("Selected file:", file);
+      // You can add further logic to upload the file here
+    }
+  };
+
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto md:px-32 py-8">
       <h1 className="text-3xl font-bold mb-6">
         Drop Us a <span className="text-customGreen">Line</span>
       </h1>
@@ -121,10 +137,25 @@ const React_Assignment = () => {
               className="w-full text-gray-400 bg-transparent outline-none"
               disabled
             />
-            <button className="min-w-44 bg-customGreen text-white px-4 py-2 rounded-lg text-sm">
-              <GrAttachment className="inline-block w-4 h-4 mr-2" />
-              Add File(5MB)
-            </button>
+            <div>
+              {/* Hidden file input */}
+              <input
+                type="file"
+                ref={fileInputRef}
+                style={{ display: "none" }}
+                onChange={handleFileChange}
+                accept="application/pdf, image/*" // Optionally restrict file types
+              />
+
+              {/* Button to trigger file input */}
+              <button
+                className="min-w-44 bg-customGreen text-white px-4 py-2 rounded-lg text-sm"
+                onClick={handleButtonClick}
+              >
+                <GrAttachment className="inline-block w-4 h-4 mr-2" />
+                Add File (5MB)
+              </button>
+            </div>
           </div>
         </div>
       </form>
