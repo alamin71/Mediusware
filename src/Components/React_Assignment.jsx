@@ -1,12 +1,13 @@
 import React from "react";
 
 import { FaGooglePlay } from "react-icons/fa";
+import { GrAttachment } from "react-icons/gr";
 
 const React_Assignment = () => {
   return (
     <div>
       <div className="container mx-auto px-4 py-8">
-        <h2 className="container text-3xl font-bold mb-6">
+        <h2 className="text-3xl font-bold text-center mb-6">
           Drop Us a <span className="text-green-600">Line</span>
         </h2>
         <form className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto">
@@ -69,7 +70,7 @@ const React_Assignment = () => {
                 <button
                   key={service}
                   type="button"
-                  className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-green-100 hover:text-green-900 text-black focus:bg-green-500 focus:text-white transition"
+                  className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-green-100 hover:text-green-600  hover:font-semibold text-black focus:bg-green-500 focus:text-white transition"
                 >
                   {service}
                 </button>
@@ -91,7 +92,7 @@ const React_Assignment = () => {
                 <button
                   key={budget}
                   type="button"
-                  className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-green-100 hover:text-green-900 text-black focus:bg-green-500 focus:text-white transition"
+                  className="px-3 py-1 border rounded-md bg-gray-200 hover:bg-green-100 hover:text-green-600  hover:font-semibold text-black focus:bg-green-500 focus:text-white transition"
                 >
                   {budget}
                 </button>
@@ -109,11 +110,22 @@ const React_Assignment = () => {
             />
           </div>
 
-          <div className="mt-4">
-            <label className="block text-gray-700">
-              Add Attachments (Optional)
+          <div className="flex flex-col space-y-1">
+            <label className="text-gray-500 text-sm">
+              Add Attachments <span className="text-gray-400">(Optional)</span>
             </label>
-            <input type="file" className="w-full p-2 border rounded-md mt-1" />
+            <div className="flex items-center space-x-2 border rounded-lg p-2">
+              <input
+                type="text"
+                placeholder="(a brief, idea, branding guideline, old design,...)"
+                className="w-full text-gray-400 bg-transparent outline-none"
+                disabled
+              />
+              <button className="min-w-44 bg-green-700 text-white px-4 py-2 rounded-lg">
+                <GrAttachment className="inline-block w-5 h-5 mr-2" />
+                Add File(5MB)
+              </button>
+            </div>
           </div>
 
           <button
