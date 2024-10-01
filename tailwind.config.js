@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customFormShadowBg: "#F9FAFB",
+        cusTomBtnHoverClr: "#E9F9F3",
+        customBtnTextClr: "#00A88E",
+        customGreen: "#13AF88",
+      },
+    },
   },
   plugins: [require("daisyui")],
 };
