@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { FaGooglePlay } from "react-icons/fa";
 
 
 const React_Assignment = () => {
@@ -98,9 +99,10 @@ const React_Assignment = () => {
           type="submit"
           className=" bg-blue-500 text-white p-3 rounded-md mt-6 hover:bg-blue-600 transition"
         >
-          Send Inquiry
-          
+          Send Inquiry <FaGooglePlay className="inline-block" />
+        
         </button>
+
       </form>
     </div>
 
