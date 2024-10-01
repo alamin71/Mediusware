@@ -5,11 +5,11 @@ import { GrAttachment } from "react-icons/gr";
 
 const React_Assignment = () => {
   return (
-    <div className="container mx-auto py-8 ">
+    <div className="container mx-auto py-8">
       <h1 className="text-3xl font-bold mb-6">
         Drop Us a <span className="text-customGreen">Line</span>
       </h1>
-      <form className="bg-customFormShadowBg shadow-md rounded-lg p-6 max-w-4xl">
+      <form className="bg-customFormShadowBg shadow-md rounded-lg p-6 max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-gray-700">Name*</label>
@@ -31,7 +31,7 @@ const React_Assignment = () => {
           </div>
           <div>
             <label className="block text-gray-700">
-              Phone Number (Optional)
+              Phone Number <span className="text-gray-400">(Optional)</span>
             </label>
             <input
               type="tel"
@@ -41,7 +41,7 @@ const React_Assignment = () => {
           </div>
           <div>
             <label className="block text-gray-700">
-              Company Name (Optional)
+              Company Name <span className="text-gray-400">(Optional)</span>
             </label>
             <input
               type="text"
@@ -78,7 +78,9 @@ const React_Assignment = () => {
         </div>
 
         <div className="mt-4">
-          <label className="block text-gray-700">Your Budget (Optional)</label>
+          <label className="block text-gray-700">
+            Your Budget <span className="text-gray-400">(Optional)</span>
+          </label>
           <div className="flex flex-wrap gap-2 mt-2">
             {[
               "Less than $500",
@@ -99,7 +101,8 @@ const React_Assignment = () => {
 
         <div className="mt-4">
           <label className="block text-gray-700">
-            Deep Details About Your Query (Optional)
+            Deep Details About Your Query{" "}
+            <span className="text-gray-400">(Optional)</span>
           </label>
           <textarea
             className="w-full p-2 border rounded-md mt-1"
@@ -118,8 +121,8 @@ const React_Assignment = () => {
               className="w-full text-gray-400 bg-transparent outline-none"
               disabled
             />
-            <button className="min-w-44 bg-customGreen text-white px-4 py-2 rounded-lg">
-              <GrAttachment className="inline-block w-5 h-5 mr-2" />
+            <button className="min-w-44 bg-customGreen text-white px-4 py-2 rounded-lg text-sm">
+              <GrAttachment className="inline-block w-4 h-4 mr-2" />
               Add File(5MB)
             </button>
           </div>
@@ -127,7 +130,7 @@ const React_Assignment = () => {
       </form>
       <button
         type="submit"
-        className=" bg-blue-500 text-white p-3 rounded-md mt-6 hover:bg-blue-600 transition"
+        className=" bg-customSubmitBtnBg text-white text-sm p-3 rounded-lg px-8 mt-4 mb-4 hover:bg-blue-600 transition"
       >
         Send Inquiry <FaGooglePlay className="inline-block" />
       </button>
