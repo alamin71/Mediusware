@@ -5,27 +5,27 @@ import { GrAttachment } from "react-icons/gr";
 
 const React_Assignment = () => {
   const fileInputRef = useRef(null);
-
   // Function to trigger file input click
   const handleButtonClick = () => {
     fileInputRef.current.click();
   };
-
   // Function to handle file selection
   const handleFileChange = (e) => {
     const file = e.target.files[0]; // Get the first selected file
     if (file) {
       console.log("Selected file:", file);
-      // You can add further logic to upload the file here
     }
   };
+  const handleSubmitForm =(e)=>{
+    
+  }
 
   return (
     <div className="container mx-auto md:px-32 py-8">
       <h1 className="text-3xl font-bold mb-6">
         Drop Us a <span className="text-customGreen">Line</span>
       </h1>
-      <form className="bg-customFormShadowBg shadow-md rounded-lg p-6 max-w-5xl">
+      <form className="bg-customFormShadowBg shadow-md rounded-lg p-6 max-w-5xl" onSubmit={handleSubmitForm}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-gray-700">Name*</label>
@@ -152,7 +152,7 @@ const React_Assignment = () => {
                 className="min-w-44 bg-customGreen text-white px-4 py-2 rounded-lg text-sm"
                 onClick={handleButtonClick}
               >
-                <GrAttachment className="inline-block w-4 h-4 mr-2" />
+                <GrAttachment className="inline-block w-4 h-4 mr-2"/>
                 Add File (5MB)
               </button>
             </div>
