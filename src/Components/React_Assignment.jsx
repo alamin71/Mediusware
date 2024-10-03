@@ -114,10 +114,10 @@ const React_Assignment = () => {
         Drop Us a <span className="text-customGreen">Line</span>
       </h1>
       <form
-        className="bg-customFormShadowBg shadow-md rounded-lg p-6 max-w-5xl"
         onSubmit={handleSubmitForm}
         noValidate
       >
+        <div className="bg-customFormShadowBg shadow-md rounded-lg p-6 max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-gray-700">Name*</label>
@@ -270,6 +270,7 @@ const React_Assignment = () => {
             </div>
           </div>
           {fileError && <p className="text-red-500 text-sm">{fileError}</p>}
+        </div>
         </div>
         <button
           type="submit"
