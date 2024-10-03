@@ -24,7 +24,7 @@ const React_Assignment = () => {
       // Validate file size 
       if (file.size > 5 * 1024 * 1024) {
         setFileError(
-          "File size exceeds 5MB limit. Please choose a smaller file."
+          "File size should Max 5MB. Please choose a smaller file."
         );
         fileInputRef.current.value = null;
       } else {
