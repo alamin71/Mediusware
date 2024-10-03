@@ -86,6 +86,11 @@ const React_Assignment = () => {
       selectedServices, 
       selectedBudget,
     });
+      // Clear form inputs
+      form.reset(); // Resets the form fields
+      setFileError(""); // Clear file error message
+      setSelectedServices([]); // Reset selected services
+      setSelectedBudget(""); // Reset selected budget
   };
 
   const handleInputChange = (e) => {
