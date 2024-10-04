@@ -1,13 +1,12 @@
 {
-    "bannerSection": {
-      "headline": "Get In Touch With <span style='color: green;'>US</span> <span style='color: green;'>Today!</span>",
-      "subHeadline": "Get job ready skills with onsite individual Training & Real Client Project",
-      "image": {
-        "src": "https://mediusware.com/_next/image?url=%2Fassets%2FContact%2Fcontact-hero.png&w=1920&q=75",
-        "alt": "Person working on a computer"
-      }
+  "bannerSection": {
+    "headline": "Get In Touch With",
+    "US": "US",
+    "Today": "Today!",
+    "subHeadline": "Get job ready skills with onsite individual Training & Real Client Project",
+    "image": {
+      "src": "https://mediusware.com/_next/image?url=%2Fassets%2FContact%2Fcontact-hero.png&w=1920&q=75",
+      "alt": "Person working on a computer"
     }
   }
-  
-  
-  
+}
