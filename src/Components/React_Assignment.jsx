@@ -113,199 +113,202 @@ const React_Assignment = () => {
   };
 
   return (
-    <div className="container flex mx-auto md:px-32 py-8">
-      <div className="w-full md:w-2/3 p-4">
-        <h1 className="text-3xl font-bold mb-6">
-          Drop Us a <span className="text-customGreen">Line</span>
-        </h1>
-        <form onSubmit={handleSubmitForm} noValidate>
-          <div className="bg-customFormShadowBg shadow-md rounded-lg p-6 max-w-5xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-gray-700">Name*</label>
-                <input
-                  type="text"
-                  className="w-full p-2 border rounded-md mt-1"
-                  placeholder="Enter Your Name"
-                  required
-                  name="name"
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700">Email*</label>
-                <input
-                  type="email"
-                  className="w-full p-2 border rounded-md mt-1"
-                  placeholder="Enter Your Email"
-                  required
-                  name="email"
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700">
-                  Phone Number <span className="text-gray-400">(Optional)</span>
-                </label>
-                <input
-                  type="tel"
-                  className="w-full p-2 border rounded-md mt-1"
-                  placeholder="Enter Your Phone Number"
-                  name="phoneNumber"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700">
-                  Company Name <span className="text-gray-400">(Optional)</span>
-                </label>
-                <input
-                  type="text"
-                  className="w-full p-2 border rounded-md mt-1"
-                  placeholder="Enter Your Company Name"
-                  name="company"
-                />
-              </div>
-            </div>
-
-            <div className="mt-4">
-              <label className="block text-gray-700">
-                Services You Need (You can choose multiple)
-              </label>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {[
-                  "Mobile Development",
-                  "Web Development",
-                  "SQA Solution",
-                  "Web UX/UI Design",
-                  "API Integration",
-                  "Mobile UX/UI Design",
-                  "Software Development",
-                  "Custom Service",
-                ].map((service) => (
-                  <button
-                    key={service}
-                    type="button"
-                    className={`px-3 py-1 border rounded-md ${selectedServices.includes(service)
-                        ? "bg-green-500 text-white"
-                        : "bg-gray-200 text-black"
-                      } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr transition`}
-                    onClick={() => toggleService(service)}
-                  >
-                    {service}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-4">
-              <label className="block text-gray-700">
-                Your Budget <span className="text-gray-400">(Optional)</span>
-              </label>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {[
-                  "Less than $500",
-                  "$500 - $1,000",
-                  "$1,001 - $1,500",
-                  "$1,500 - $2,000",
-                ].map((budget) => (
-                  <button
-                    key={budget}
-                    type="button"
-                    className={`px-3 py-1 border rounded-md ${selectedBudget === budget
-                        ? "bg-green-500 text-white"
-                        : "bg-gray-200 text-black"
-                      } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr transition`}
-                    onClick={() => selectBudget(budget)}
-                  >
-                    {budget}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-4">
-              <label className="block text-gray-700">
-                Deep Details About Your Query{" "}
-                <span className="text-gray-400">(Optional)</span>
-              </label>
-              <textarea
-                className="w-full p-2 border rounded-md mt-1"
-                placeholder="Tell us more about your query"
-                name="inQuery"
-              />
-            </div>
-
-            <div className="flex flex-col space-y-1">
-              <label className="text-gray-500 text-sm">
-                Add Attachments <span className="text-gray-400">(Optional)</span>
-              </label>
-              <div className="flex items-center space-x-2 border rounded-lg p-2">
-                <input
-                  type="text"
-                  placeholder="(a brief, idea, branding guideline, old design,...)"
-                  className="w-full text-gray-400 bg-transparent outline-none"
-                  disabled
-                />
+    <>
+      <div className="container flex flex-col md:flex-row mx-auto md:px-32 py-8">
+        <div className="w-full md:w-2/3 p-4">
+          <h1 className="text-3xl font-bold mb-6">
+            Drop Us a <span className="text-customGreen">Line</span>
+          </h1>
+          <form onSubmit={handleSubmitForm} noValidate>
+            <div className="bg-customFormShadowBg shadow-md rounded-lg p-6 max-w-5xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  {/* Hidden file input */}
+                  <label className="block text-gray-700">Name*</label>
                   <input
-                    type="file"
-                    ref={fileInputRef}
-                    style={{ display: "none" }}
-                    onChange={handleFileChange}
-                  // accept="application/pdf, image/*"
+                    type="text"
+                    className="w-full p-2 border rounded-md mt-1"
+                    placeholder="Enter Your Name"
+                    required
+                    name="name"
+                    onChange={handleInputChange}
                   />
-
-                  {/* Button to trigger file input */}
-                  <button
-                    className={`min-w-44 bg-customGreen text-white px-4 py-2 rounded-lg text-sm ${!isFormValid ? "opacity-50 cursor-not-allowed" : ""
-                      }`}
-                    onClick={handleButtonClick}
-                    disabled={!isFormValid} // Disable the button if the form is not valid
-                  >
-                    <GrAttachment className="inline-block w-4 h-4 mr-2" />
-                    Add File (5MB)
-                  </button>
+                </div>
+                <div>
+                  <label className="block text-gray-700">Email*</label>
+                  <input
+                    type="email"
+                    className="w-full p-2 border rounded-md mt-1"
+                    placeholder="Enter Your Email"
+                    required
+                    name="email"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700">
+                    Phone Number <span className="text-gray-400">(Optional)</span>
+                  </label>
+                  <input
+                    type="tel"
+                    className="w-full p-2 border rounded-md mt-1"
+                    placeholder="Enter Your Phone Number"
+                    name="phoneNumber"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700">
+                    Company Name <span className="text-gray-400">(Optional)</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full p-2 border rounded-md mt-1"
+                    placeholder="Enter Your Company Name"
+                    name="company"
+                  />
                 </div>
               </div>
-              {fileError && <p className="text-red-500 text-sm">{fileError}</p>}
+
+              <div className="mt-4">
+                <label className="block text-gray-700">
+                  Services You Need (You can choose multiple)
+                </label>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {[
+                    "Mobile Development",
+                    "Web Development",
+                    "SQA Solution",
+                    "Web UX/UI Design",
+                    "API Integration",
+                    "Mobile UX/UI Design",
+                    "Software Development",
+                    "Custom Service",
+                  ].map((service) => (
+                    <button
+                      key={service}
+                      type="button"
+                      className={`px-3 py-1 border rounded-md ${selectedServices.includes(service)
+                        ? "bg-green-500 text-white"
+                        : "bg-gray-200 text-black"
+                        } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr transition`}
+                      onClick={() => toggleService(service)}
+                    >
+                      {service}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-4">
+                <label className="block text-gray-700">
+                  Your Budget <span className="text-gray-400">(Optional)</span>
+                </label>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {[
+                    "Less than $500",
+                    "$500 - $1,000",
+                    "$1,001 - $1,500",
+                    "$1,500 - $2,000",
+                  ].map((budget) => (
+                    <button
+                      key={budget}
+                      type="button"
+                      className={`px-3 py-1 border rounded-md ${selectedBudget === budget
+                        ? "bg-green-500 text-white"
+                        : "bg-gray-200 text-black"
+                        } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr transition`}
+                      onClick={() => selectBudget(budget)}
+                    >
+                      {budget}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-4">
+                <label className="block text-gray-700">
+                  Deep Details About Your Query{" "}
+                  <span className="text-gray-400">(Optional)</span>
+                </label>
+                <textarea
+                  className="w-full p-2 border rounded-md mt-1"
+                  placeholder="Tell us more about your query"
+                  name="inQuery"
+                />
+              </div>
+
+              <div className="flex flex-col space-y-1">
+                <label className="text-gray-500 text-sm">
+                  Add Attachments <span className="text-gray-400">(Optional)</span>
+                </label>
+                <div className="flex items-center space-x-2 border rounded-lg p-2">
+                  <input
+                    type="text"
+                    placeholder="(a brief, idea, branding guideline, old design,...)"
+                    className="w-full text-gray-400 bg-transparent outline-none"
+                    disabled
+                  />
+                  <div>
+                    {/* Hidden file input */}
+                    <input
+                      type="file"
+                      ref={fileInputRef}
+                      style={{ display: "none" }}
+                      onChange={handleFileChange}
+                    // accept="application/pdf, image/*"
+                    />
+
+                    {/* Button to trigger file input */}
+                    <button
+                      className={`min-w-44 bg-customGreen text-white px-4 py-2 rounded-lg text-sm ${!isFormValid ? "opacity-50 cursor-not-allowed" : ""
+                        }`}
+                      onClick={handleButtonClick}
+                      disabled={!isFormValid} // Disable the button if the form is not valid
+                    >
+                      <GrAttachment className="inline-block w-4 h-4 mr-2" />
+                      Add File (5MB)
+                    </button>
+                  </div>
+                </div>
+                {fileError && <p className="text-red-500 text-sm">{fileError}</p>}
+              </div>
             </div>
+            <button
+              type="submit"
+              className=" bg-customSubmitBtnBg text-white text-sm p-3 rounded-lg px-8 mt-4 mb-4 hover:bg-blue-600 transition"
+            >
+              Send Inquiry <FaGooglePlay className="inline-block" />
+            </button>
+          </form>
+        </div>
+        {/* Contact Details Section */}
+        <div className="w-full md:w-1/3 p-4">
+          <h2 className="text-3xl font-bold mb-6">
+            Contact <span className="text-customGreen">Details</span>
+          </h2>
+          <div className="bg-white p-6 shadow-lg rounded-lg">
+
+            <p className="mb-3"><strong>Address</strong></p>
+            <p className="mb-4 flex items-center text-base"><FaLocationDot className="inline-block mr-3" />
+              24/1, Taj Mahal Road, Shiya Masjid mor, Ring Road, Mohammadpur, Dhaka</p>
+            <p className="mb-4 flex items-center text-base"><FaPhoneAlt className="inline-block mr-2" /> +8801750020408</p>
+            <p className="mb-4 flex items-center text-base"><FaEnvelope className="inline-block mr-2" /> career@mediusware.com</p>
+            <p className="mb-4 flex items-center text-base"><FaClock className="inline-block mr-2" />
+              Monday to Friday: 12 PM - 9 PM</p>
+
           </div>
-          <button
-            type="submit"
-            className=" bg-customSubmitBtnBg text-white text-sm p-3 rounded-lg px-8 mt-4 mb-4 hover:bg-blue-600 transition"
-          >
-            Send Inquiry <FaGooglePlay className="inline-block" />
-          </button>
-        </form>
-      </div>
-      {/* Contact Details Section */}
-      <div className="w-full md:w-1/3 p-4">
-        <h2 className="text-3xl font-bold mb-6">
-          Contact <span className="text-customGreen">Details</span>
-        </h2>
-        <div className="bg-white p-6 shadow-lg rounded-lg">
-
-          <p className="mb-2"><strong>Address</strong></p>
-          <p className="mb-4"><FaLocationDot className="inline-block mr-2" />
-            24/1, Taj Mahal Road, Shiya Masjid mor, Ring Road, Mohammadpur, Dhaka</p>
-          <p className="mb-2"><FaPhoneAlt className="inline-block mr-2" /> +8801750020408</p>
-          <p className="mb-4"><FaEnvelope className="inline-block mr-2" /> career@mediusware.com</p>
-          <p className="mb-4"><FaClock className="inline-block mr-2" />
-          Monday to Friday: 12 PM - 9 PM</p>
-
-        </div>
-        <h2 className="text-3xl font-bold mt-16">
-          Follow <span className="text-customGreen">Up</span>
-        </h2>
-        <div className="flex space-x-4 mt-4">
-          <a href="#" className="text-blue-500"><FaFacebook className="w-11 h-11" /></a>
-          <a href="#" className="text-blue-500"><FaTwitter className="w-11 h-11" /></a>
-          <a href="#" className="text-blue-500"><FaLinkedin className="w-11 h-11" /></a>
-          <a href="#" className="text-blue-500"><FaInstagram className="w-11 h-11" /></a>
+          <h2 className="text-3xl font-bold mt-16">
+            Follow <span className="text-customGreen">Up</span>
+          </h2>
+          <div className="flex space-x-4 mt-4">
+            <a href="#" className="text-blue-500"><FaFacebook className="w-11 h-11" /></a>
+            <a href="#" className="text-blue-500"><FaTwitter className="w-11 h-11" /></a>
+            <a href="#" className="text-blue-500"><FaLinkedin className="w-11 h-11" /></a>
+            <a href="#" className="text-blue-500"><FaInstagram className="w-11 h-11" /></a>
+          </div>
         </div>
       </div>
-    </div>
+    
+    </>
   );
 };
 export default React_Assignment;
