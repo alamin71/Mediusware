@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 
 const BannerSection = () => {
@@ -36,8 +37,8 @@ const BannerSection = () => {
   const { headline, subHeadline, image } = bannerData;
 
   return (
-    <div className="flex items-center bg-customFormShadowBg p-10">
-      <div className="flex-1 text-gray-800 font-sans">
+    <div className="flex flex-col md:flex-row items-center bg-customFormShadowBg p-10">
+      <div className="flex-1 text-gray-800 font-sans mb-6 md:mb-0">
         <h1 className="text-6xl font-bold mb-4">
           Get In Touch With <span className="text-customGreen">US</span><br />
           <span className="text-customGreen">Today!</span>
