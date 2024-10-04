@@ -1,5 +1,7 @@
 
 import './App.css'
+import BannerSection from './Components/Banner/BannerSection'
+
 import CompanyLocation from './Components/CompanyLocation/CompanyLocation'
 import Navbar from './Components/Navbar/Navbar'
 
@@ -11,6 +13,7 @@ function App() {
   return (
     <>
     <Navbar/>
+   <BannerSection/>
     <React_Assignment />
     <CompanyLocation/>
     </>
