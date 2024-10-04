@@ -26,25 +26,26 @@ const BannerSection = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="text-center text-lg">Loading...</div>; 
   }
-
+  
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="text-center text-red-600">Error: {error}</div>;
   }
 
-  // Destructure banner data
-  const { headline, subHeadline, image, style } = bannerData;
+  const { headline, subHeadline, image } = bannerData;
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', backgroundColor: style.backgroundColor, padding: '20px' }}>
-      <div style={{ flex: 1, color: style.textColor, fontFamily: style.font }}>
-        <h1>{headline}</h1>
-        <p>{subHeadline}</p>
-        
+    <div className="flex items-center bg-customFormShadowBg p-10">
+      <div className="flex-1 text-gray-800 font-sans">
+        <h1 className="text-6xl font-bold mb-4">
+          Get In Touch With <span className="text-customGreen">US</span><br />
+          <span className="text-customGreen">Today!</span>
+        </h1>
+        <p className="text-lg mb-6">{subHeadline}</p>
       </div>
-      <div style={{ flex: 1 }}>
-        <img src={image.src} alt={image.alt} style={{ maxWidth: '100%', height: 'auto' }} />
+      <div className="flex-1">
+        <img src={image.src} alt={image.alt} className="max-w-full h-auto" />
       </div>
     </div>
   );
