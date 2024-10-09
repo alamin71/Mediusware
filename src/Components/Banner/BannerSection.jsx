@@ -43,7 +43,6 @@ const BannerSection = () => {
           <br />
           <span className="text-customGreen">{Today}</span>
         </h1>
-        {/* <h1>{headline}</h1> */}
         <p className="text-lg mb-6">{subHeadline}</p>
       </div>
       <div className="flex-1">

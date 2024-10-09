@@ -1,5 +1,14 @@
 import React, { useRef, useState } from "react";
-import { FaGooglePlay, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
+import SendBtn from "../assets/Images/SendBtn.png";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
 import { GrAttachment } from "react-icons/gr";
@@ -146,7 +155,8 @@ const React_Assignment = () => {
                 </div>
                 <div>
                   <label className="block text-gray-700">
-                    Phone Number <span className="text-gray-400">(Optional)</span>
+                    Phone Number{" "}
+                    <span className="text-gray-400">(Optional)</span>
                   </label>
                   <input
                     type="tel"
@@ -157,7 +167,8 @@ const React_Assignment = () => {
                 </div>
                 <div>
                   <label className="block text-gray-700">
-                    Company Name <span className="text-gray-400">(Optional)</span>
+                    Company Name{" "}
+                    <span className="text-gray-400">(Optional)</span>
                   </label>
                   <input
                     type="text"
@@ -186,10 +197,11 @@ const React_Assignment = () => {
                     <button
                       key={service}
                       type="button"
-                      className={`px-3 py-1 border rounded-md ${selectedServices.includes(service)
-                        ? "bg-green-500 text-white"
-                        : "bg-gray-200 text-black"
-                        } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr transition`}
+                      className={`px-3 py-1 border rounded-md ${
+                        selectedServices.includes(service)
+                          ? "bg-green-500 text-white"
+                          : "bg-gray-200 text-black"
+                      } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr  hover:border-blue-500 transition`}
                       onClick={() => toggleService(service)}
                     >
                       {service}
@@ -212,10 +224,11 @@ const React_Assignment = () => {
                     <button
                       key={budget}
                       type="button"
-                      className={`px-3 py-1 border rounded-md ${selectedBudget === budget
-                        ? "bg-green-500 text-white"
-                        : "bg-gray-200 text-black"
-                        } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr transition`}
+                      className={`px-3 py-1 border rounded-md ${
+                        selectedBudget === budget
+                          ? "bg-green-500 text-white"
+                          : "bg-gray-200 text-black"
+                      } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr  hover:border-blue-500 transition`}
                       onClick={() => selectBudget(budget)}
                     >
                       {budget}
@@ -238,7 +251,8 @@ const React_Assignment = () => {
 
               <div className="flex flex-col space-y-1">
                 <label className="text-gray-500 text-sm">
-                  Add Attachments <span className="text-gray-400">(Optional)</span>
+                  Add Attachments{" "}
+                  <span className="text-gray-400">(Optional)</span>
                 </label>
                 <div className="flex items-center space-x-2 border rounded-lg p-2">
                   <input
@@ -254,13 +268,14 @@ const React_Assignment = () => {
                       ref={fileInputRef}
                       style={{ display: "none" }}
                       onChange={handleFileChange}
-                    // accept="application/pdf, image/*"
+                      // accept="application/pdf, image/*"
                     />
 
                     {/* Button to trigger file input */}
                     <button
-                      className={`min-w-44 bg-customGreen text-white px-4 py-2 rounded-lg text-sm ${!isFormValid ? "opacity-50 cursor-not-allowed" : ""
-                        }`}
+                      className={`min-w-44 bg-customGreen text-white px-4 py-2 rounded-lg text-sm ${
+                        !isFormValid ? "opacity-50 cursor-not-allowed" : ""
+                      }`}
                       onClick={handleButtonClick}
                       disabled={!isFormValid} // Disable the button if the form is not valid
                     >
@@ -269,45 +284,66 @@ const React_Assignment = () => {
                     </button>
                   </div>
                 </div>
-                {fileError && <p className="text-red-500 text-sm">{fileError}</p>}
+                {fileError && (
+                  <p className="text-red-500 text-sm">{fileError}</p>
+                )}
               </div>
             </div>
             <button
               type="submit"
-              className=" bg-customSubmitBtnBg text-white text-sm p-3 rounded-lg px-8 mt-4 mb-4 hover:bg-blue-600 transition"
+              className=" bg-customSubmitBtnBg text-white text-sm p-3 rounded-lg px-8 mt-4 mb-4 hover:bg-blue-600  transition"
             >
-              Send Inquiry <FaGooglePlay className="inline-block" />
+              Send Inquiry{" "}
+              <img src={SendBtn} alt="SendBtn" className="ml-2 inline-block" />
             </button>
           </form>
         </div>
-        {/* Contact Details Section */}
-        <div className="w-full md:w-1/3 p-4">
+        {/*.............. 
+        Contact Details Section
+         .............*/}
+        <div className="w-full md:w-1/3 p-4 text-black">
           <h2 className="text-3xl font-bold mb-6">
             Contact <span className="text-customGreen">Details</span>
           </h2>
           <div className="bg-white p-6 shadow-lg rounded-lg">
-
-            <p className="mb-3"><strong>Address</strong></p>
-            <p className="mb-4 flex items-center text-base"><FaLocationDot className="inline-block mr-3" />
-              24/1, Taj Mahal Road, Shiya Masjid mor, Ring Road, Mohammadpur, Dhaka</p>
-            <p className="mb-4 flex items-center text-base"><FaPhoneAlt className="inline-block mr-2" /> +8801750020408</p>
-            <p className="mb-4 flex items-center text-base"><FaEnvelope className="inline-block mr-2" /> career@mediusware.com</p>
-            <p className="mb-4 flex items-center text-base"><FaClock className="inline-block mr-2" />
-              Monday to Friday: 12 PM - 9 PM</p>
-
+            <p className="mb-3">
+              <strong>Address</strong>
+            </p>
+            <p className="mb-4 flex items-center text-base">
+              <FaLocationDot className="inline-block mr-3 w-7 h-7" />
+              24/1, Taj Mahal Road, Shiya Masjid mor, Ring Road, Mohammadpur,
+              Dhaka
+            </p>
+            <p className="mb-4 flex items-center text-base">
+              <FaPhoneAlt className="inline-block mr-2" /> +8801750020408
+            </p>
+            <p className="mb-4 flex items-center text-base">
+              <FaEnvelope className="inline-block mr-2" /> career@mediusware.com
+            </p>
+            <p className="mb-4 flex items-center text-base">
+              <FaClock className="inline-block mr-2" />
+              Monday to Friday: 12 PM - 9 PM
+            </p>
           </div>
           <h2 className="text-3xl font-bold mt-16">
             Follow <span className="text-customGreen">Up</span>
           </h2>
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-blue-500"><FaFacebook className="w-11 h-11" /></a>
-            <a href="#" className="text-blue-500"><FaTwitter className="w-11 h-11" /></a>
-            <a href="#" className="text-blue-500"><FaLinkedin className="w-11 h-11" /></a>
-            <a href="#" className="text-blue-500"><FaInstagram className="w-11 h-11" /></a>
+            <a href="#" className="text-blue-500">
+              <FaFacebook className="w-11 h-11" />
+            </a>
+            <a href="#" className="text-blue-500">
+              <FaTwitter className="w-11 h-11" />
+            </a>
+            <a href="#" className="text-blue-500">
+              <FaLinkedin className="w-11 h-11" />
+            </a>
+            <a href="#" className="text-blue-500">
+              <FaInstagram className="w-11 h-11" />
+            </a>
           </div>
         </div>
       </div>
-    
     </>
   );
 };
