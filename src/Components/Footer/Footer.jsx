@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../../assets/Images/Logo.png";
 import footerImg1 from "../../assets/Images/footerImg1.png";
-import footerImg2 from "../../assets/Images/footerImg2.png";
-import footerImg3 from "../../assets/Images/footerImg3.png";
+// import footerImg2 from "../../assets/Images/footerImg2.png";
+// import footerImg3 from "../../assets/Images/footerImg3.png";
 import footerImg4 from "../../assets/Images/footerImg4.png";
 import footerImg5 from "../../assets/Images/footerImg5.png";
 import footerImg6 from "../../assets/Images/footerImg6.png";
@@ -11,7 +11,15 @@ import footerImg8 from "../../assets/Images/footerImg8.png";
 import footerImg10 from "../../assets/Images/footerImg10.png";
 import americanImg from "../../assets/Images/american_flag.png";
 import BangladeshImg from "../../assets/Images/Bangladesh_Flag.png";
-import { FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaYoutube,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
@@ -54,11 +62,20 @@ const Footer = () => {
       <div className="footer bg-base-200 text-base-content p-10 border-b-2 border-dotted border-gray-500">
         <aside>
           <img src={logo} alt="logo" />
-          <p>
-            ACME Industries Ltd.
-            <br />
-            Providing reliable tech since 1992
-          </p>
+          <div className="flex space-x-4 mt-4">
+            <a href="#" className="text-blue-500">
+              <FaFacebook className="w-9 h-9" />
+            </a>
+            <a href="#" className="text-blue-500">
+              <FaTwitter className="w-9 h-9" />
+            </a>
+            <a href="#" className="text-blue-500">
+              <FaLinkedin className="w-9 h-9" />
+            </a>
+            <a href="#" className="text-blue-500">
+              <FaYoutube className="w-9 h-9" />
+            </a>
+          </div>
         </aside>
         <div className="flag">
           <img src={americanImg} alt="footerImg1" className="w-full h-28" />
