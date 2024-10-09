@@ -135,7 +135,7 @@ const React_Assignment = () => {
                   <label className="block text-gray-700">Name*</label>
                   <input
                     type="text"
-                    className="w-full p-2 border rounded-md mt-1"
+                    className="w-full p-2 border rounded-md mt-1  bg-white"
                     placeholder="Enter Your Name"
                     required
                     name="name"
@@ -146,7 +146,7 @@ const React_Assignment = () => {
                   <label className="block text-gray-700">Email*</label>
                   <input
                     type="email"
-                    className="w-full p-2 border rounded-md mt-1"
+                    className="w-full p-2 border rounded-md mt-1 bg-white"
                     placeholder="Enter Your Email"
                     required
                     name="email"
@@ -160,7 +160,7 @@ const React_Assignment = () => {
                   </label>
                   <input
                     type="tel"
-                    className="w-full p-2 border rounded-md mt-1"
+                    className="w-full p-2 border rounded-md mt-1  bg-white"
                     placeholder="Enter Your Phone Number"
                     name="phoneNumber"
                   />
@@ -172,7 +172,7 @@ const React_Assignment = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full p-2 border rounded-md mt-1"
+                    className="w-full p-2 border rounded-md mt-1  bg-white"
                     placeholder="Enter Your Company Name"
                     name="company"
                   />
@@ -201,7 +201,7 @@ const React_Assignment = () => {
                         selectedServices.includes(service)
                           ? "bg-green-500 text-white"
                           : "bg-gray-200 text-black"
-                      } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr  hover:border-blue-500 transition`}
+                      } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr  hover:border-customGreen transition`}
                       onClick={() => toggleService(service)}
                     >
                       {service}
@@ -228,7 +228,7 @@ const React_Assignment = () => {
                         selectedBudget === budget
                           ? "bg-green-500 text-white"
                           : "bg-gray-200 text-black"
-                      } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr  hover:border-blue-500 transition`}
+                      } hover:bg-cusTomBtnHoverClr hover:text-customBtnTextClr  hover:border-customGreen transition`}
                       onClick={() => selectBudget(budget)}
                     >
                       {budget}
@@ -243,7 +243,7 @@ const React_Assignment = () => {
                   <span className="text-gray-400">(Optional)</span>
                 </label>
                 <textarea
-                  className="w-full p-2 border rounded-md mt-1"
+                  className="w-full p-2 border rounded-md mt-1  bg-white"
                   placeholder="Tell us more about your query"
                   name="inQuery"
                 />
