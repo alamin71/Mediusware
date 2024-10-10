@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../../assets/Images/Logo.png";
-import navDownIcon from "../../assets/Images/navDownIcon.png";
 import SendBtn from "../../assets/Images/SendBtn.png";
 import { Link, NavLink } from "react-router-dom";
 
@@ -114,7 +113,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar w-full bg-white">
+    <div className="navbar w-full bg-white  z-30 transition-all duration-1000 ease-linear fixed shadow-2xl">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
