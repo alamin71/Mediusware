@@ -125,7 +125,7 @@ const React_Assignment = () => {
     <>
       <div className="container flex flex-col md:flex-row mx-auto md:px-32 py-8">
         <div className="w-full md:w-2/3 p-4">
-          <h1 className="text-3xl font-bold mb-6">
+          <h1 className="text-3xl font-bold mb-6 text-black">
             Drop Us a <span className="text-customGreen">Line</span>
           </h1>
           <form onSubmit={handleSubmitForm} noValidate>
