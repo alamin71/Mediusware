@@ -174,7 +174,7 @@ const Footer = () => {
           </div>
           <div>
             <img
-              src={footerImg10}
+              src={footerImg5}
               alt="footerImg1"
               className="w-28 h-32 mx-2 my-2"
             />
