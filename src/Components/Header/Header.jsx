@@ -4,7 +4,7 @@ import TopBar from "../TopBar/TopBar";
 
 const Header = () => {
   return (
-    <div className="">
+    <div className="fixed w-full">
       <TopBar />
       <Navbar></Navbar>
     </div>
