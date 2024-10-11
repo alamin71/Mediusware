@@ -7,7 +7,7 @@ const Navbar = () => {
   const links = (
     <>
       <li className="relative group">
-        <NavLink to="/company" className="relative flex items-center group">
+        <Link className="relative flex items-center group">
           <span className="pb-1 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
             Company
           </span>
@@ -25,43 +25,58 @@ const Navbar = () => {
               clipRule="evenodd"
             />
           </svg>
-        </NavLink>
+        </Link>
 
         {/* Dropdown Menu */}
-        <ul className="absolute hidden group-hover:grid bg-white shadow-lg mt-7 w-96 grid-cols-3 gap-4 p-4 ">
+        <ul className="absolute hidden group-hover:grid bg-white rounded-lg text-black shadow-lg mt-11 w-svw grid-cols-5 gap-4 p-4 ">
           <div>
-            <li className="px-4 py-2 hover:bg-gray-100 w-96">
-              <a href="#">Who we are</a>
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-100 w-96">
-              <a href="#">Our Team</a>
-            </li>
+            <h2 className="text-customGreen">About</h2>
+            <Link to="/company">
+              <li className=" py-2 hover:bg-gray-100">Who we are</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Our Team</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Blog</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Leadership and Vision</li>
+            </Link>
           </div>
           <div>
-            <li className="px-4 py-2 hover:bg-gray-100">
-              <a href="#">Women Empowerment</a>
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-100">
-              <a href="#">Career</a>
-            </li>
+            <h2 className="text-customGreen">Development</h2>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Women Empowerment</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Career</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">CSR</li>
+            </Link>
           </div>
           <div>
-            <li className="px-4 py-2 hover:bg-gray-100">
-              <a href="#">Our Vision</a>
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-100">
-              <a href="#">Contact Us</a>
-            </li>
+            <h2 className="text-customGreen">Model</h2>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Delivery Models</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Engagement Model</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">
+                Development Methodology
+              </li>
+            </Link>
           </div>
         </ul>
       </li>
-
-      <li>
-        <NavLink to="/service" className="relative flex items-center group">
+      <li className="relative group">
+        <Link className="relative flex items-center group">
           <span className="pb-1 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
             Services
           </span>
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -76,14 +91,58 @@ const Navbar = () => {
               clipRule="evenodd"
             />
           </svg>
-        </NavLink>
+        </Link>
+
+        {/* Dropdown Menu */}
+        <ul className="absolute hidden group-hover:grid bg-white rounded-lg text-black shadow-lg mt-11 w-svw grid-cols-5 gap-4 p-4 ">
+          <div>
+            <h2 className="text-customGreen">About</h2>
+            <Link to="/service">
+              <li className=" py-2 hover:bg-gray-100">Service</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Our Team</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Blog</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Leadership and Vision</li>
+            </Link>
+          </div>
+          <div>
+            <h2 className="text-customGreen">Development</h2>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Women Empowerment</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Career</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">CSR</li>
+            </Link>
+          </div>
+          <div>
+            <h2 className="text-customGreen">Model</h2>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Delivery Models</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Engagement Model</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">
+                Development Methodology
+              </li>
+            </Link>
+          </div>
+        </ul>
       </li>
-      <li>
-        <NavLink to="/hireDev" className="relative flex items-center group">
+      <li className="relative group">
+        <Link className="relative flex items-center group">
           <span className="pb-1 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
             Hire Developers
           </span>
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -98,14 +157,58 @@ const Navbar = () => {
               clipRule="evenodd"
             />
           </svg>
-        </NavLink>
+        </Link>
+
+        {/* Dropdown Menu */}
+        <ul className="absolute hidden group-hover:grid bg-white rounded-lg text-black shadow-lg mt-11 w-svw grid-cols-5 gap-4 p-4 ">
+          <div>
+            <h2 className="text-customGreen">About</h2>
+            <Link to="/hireDev">
+              <li className=" py-2 hover:bg-gray-100">Hire Developer</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Our Team</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Blog</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Leadership and Vision</li>
+            </Link>
+          </div>
+          <div>
+            <h2 className="text-customGreen">Development</h2>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Women Empowerment</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Career</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">CSR</li>
+            </Link>
+          </div>
+          <div>
+            <h2 className="text-customGreen">Model</h2>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Delivery Models</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Engagement Model</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">
+                Development Methodology
+              </li>
+            </Link>
+          </div>
+        </ul>
       </li>
-      <li>
-        <NavLink to="/industries" className="relative flex items-center group">
+      <li className="relative group">
+        <Link className="relative flex items-center group">
           <span className="pb-1 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
             Industries
           </span>
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -120,7 +223,40 @@ const Navbar = () => {
               clipRule="evenodd"
             />
           </svg>
-        </NavLink>
+        </Link>
+
+        {/* Dropdown Menu */}
+        <ul className="absolute hidden group-hover:grid bg-white rounded-lg text-black shadow-lg mt-11 w-screen grid-cols-4 gap-2 p-4 ">
+          <div>
+            <h2 className="text-customGreen">About</h2>
+            <Link to="/industries">
+              <li className=" py-2 hover:bg-gray-100">Industries</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Our Team</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Blog</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Leadership and Vision</li>
+            </Link>
+          </div>
+          <div>
+            <h2 className="text-customGreen">Model</h2>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Delivery Models</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">Engagement Model</li>
+            </Link>
+            <Link>
+              <li className=" py-2 hover:bg-gray-100">
+                Development Methodology
+              </li>
+            </Link>
+          </div>
+        </ul>
       </li>
     </>
   );

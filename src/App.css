@@ -5,7 +5,7 @@ body {
 .menu li > *:not(ul, .menu-title, details, .btn).active,
 .menu li > details > summary:active {
   --tw-bg-opacity: 1;
-  background-color: green !important;
+  background-color: white !important;
   --tw-text-opacity: 1;
   color: #000;
 }
