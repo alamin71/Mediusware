@@ -113,32 +113,34 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar w-full bg-white  z-30 transition-all duration-1000 ease-linear fixed shadow-2xl">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+    <div className="navbar bg-white  z-30 transition-all duration-1000 ease-linear w-full shadow-2xl">
+      <div className="dropdown">
+        <div tabIndex={0} role="button" className="lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+            class="h-8 w-8"
           >
-            {links}
-          </ul>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            ></path>
+          </svg>
         </div>
+        <ul
+          tabIndex={0}
+          className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 p-2 shadow"
+        >
+          {links}
+        </ul>
+      </div>
+      <div className="navbar navbar-end lg:navbar-start">
         <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
@@ -148,7 +150,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <NavLink to="/startFree">
-          <a className="btn bg-customSubmitBtnBg text-white text-sm p-3 rounded-lg px-8 mt-4 mb-4 hover:bg-blue-600 transition">
+          <a className="btn bg-customSubmitBtnBg text-white text-sm p-3 rounded-lg px-8 mt-1 mb-1 hover:bg-blue-600 border-none transition">
             Start Free Trial{" "}
             <img src={SendBtn} alt="SendBtn" className="ml-2" />
           </a>

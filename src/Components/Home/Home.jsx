@@ -7,7 +7,7 @@ import TopBar from "../TopBar/TopBar";
 
 const Home = () => {
   return (
-    <div>
+    <div className="container mx-auto w-full">
       {/* <TopBar /> */}
       <BannerSection />
       <React_Assignment />

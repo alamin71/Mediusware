@@ -119,58 +119,82 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between bg-base-200 py-5 border-b-2 border-dotted border-gray-500 mx-auto">
-        <img
-          src={footerImg1}
-          alt="footerImg1"
-          className="w-28 h-32 mx-2 my-2"
-        />
-        <img
-          src={footerImg10}
-          alt="footerImg1"
-          className="w-28 h-32 mx-2 my-2"
-        />
-        <img
-          src={footerImg7}
-          alt="footerImg1"
-          className="w-28 h-32 mx-2 my-2"
-        />
-        <img
-          src={footerImg4}
-          alt="footerImg1"
-          className="w-28 h-32 mx-2 my-2"
-        />
-        <img
-          src={footerImg5}
-          alt="footerImg1"
-          className="w-28 h-32 mx-2 my-2"
-        />
-        <img
-          src={footerImg6}
-          alt="footerImg1"
-          className="w-28 h-32 mx-2 my-2"
-        />
-        <img
-          src={footerImg7}
-          alt="footerImg1"
-          className="w-28 h-32 mx-2 my-2"
-        />
-        <img
-          src={footerImg5}
-          alt="footerImg1"
-          className="w-28 h-32 mx-2 my-2"
-        />
-        <img
-          src={footerImg10}
-          alt="footerImg1"
-          className="w-28 h-32 mx-2 my-2"
-        />
-        <img
-          src={footerImg1}
-          alt="footerImg1"
-          className="w-28 h-32 mx-2 my-2"
-        />
-      </div>
+
+      {/* new section */}
+      <section class="justify-between bg-base-200 py-5 border-b-2 border-dotted border-gray-500 mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-10 gap-3 ml-2 mr-2">
+          <div>
+            <img
+              src={footerImg1}
+              alt="footerImg1"
+              className="w-28 h-32 mx-2 my-2"
+            />
+          </div>
+          <div>
+            <img
+              src={footerImg10}
+              alt="footerImg1"
+              className="w-28 h-32 mx-2 my-2"
+            />
+          </div>
+          <div>
+            <img
+              src={footerImg7}
+              alt="footerImg1"
+              className="w-28 h-32 mx-2 my-2"
+            />
+          </div>
+          <div>
+            <img
+              src={footerImg5}
+              alt="footerImg1"
+              className="w-28 h-32 mx-2 my-2"
+            />
+          </div>
+          <div>
+            <img
+              src={footerImg10}
+              alt="footerImg1"
+              className="w-28 h-32 mx-2 my-2"
+            />
+          </div>
+          <div>
+            <img
+              src={footerImg5}
+              alt="footerImg1"
+              className="w-28 h-32 mx-2 my-2"
+            />
+          </div>
+          <div>
+            <img
+              src={footerImg10}
+              alt="footerImg1"
+              className="w-28 h-32 mx-2 my-2"
+            />
+          </div>
+          <div>
+            <img
+              src={footerImg10}
+              alt="footerImg1"
+              className="w-28 h-32 mx-2 my-2"
+            />
+          </div>
+          <div>
+            <img
+              src={footerImg5}
+              alt="footerImg1"
+              className="w-28 h-32 mx-2 my-2"
+            />
+          </div>
+          <div>
+            <img
+              src={footerImg1}
+              alt="footerImg1"
+              className="w-28 h-32 mx-2 my-2"
+            />
+          </div>
+        </div>
+      </section>
       <div className="bg-base-200 text-center py-5">
         © 2024 Mediusware. All Rights Reserved
         <h1></h1>
