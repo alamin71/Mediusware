@@ -8,12 +8,14 @@ const TopBar = () => {
         <div className="flex justify-between mx-5 w-1/2">
           <div className="flex items-center text-base">
             <Link>
+              {/* USA */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="19"
                 viewBox="0 0 30.01 19.662"
               >
+                <title>USA</title>
                 <g id="united-states" transform="translate(0 -88.276)">
                   <path
                     id="Path_92911"
@@ -385,7 +387,7 @@ const TopBar = () => {
               </svg>
             </Link>
             <Link>
-              <span className="ml-2"> +1 (843) 212-6898</span>
+              <span className="ml-2 text-white"> +1 (843) 212-6898</span>
             </Link>
           </div>
           <div className="flex items-center text-base">
@@ -398,6 +400,7 @@ const TopBar = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
+                <title>Bangladesh</title>
                 <g clipPath="url(#clip0_503_2773)">
                   <rect width="28" height="20" rx="2" fill="white"></rect>
                   <mask
@@ -430,7 +433,7 @@ const TopBar = () => {
             </Link>
             <Link>
               {" "}
-              <span className="ml-2"> +8801750020408</span>
+              <span className="ml-2 text-white"> +8801750020408</span>
             </Link>
           </div>
           <div>
@@ -551,7 +554,7 @@ const TopBar = () => {
             </Link>
             <Link>
               {" "}
-              <span className="ml-2"> sales@mediusware.com</span>
+              <span className="ml-2 text-white"> sales@mediusware.com</span>
             </Link>
           </div>
           <div className="flex items-center text-base">
@@ -594,7 +597,7 @@ const TopBar = () => {
             </Link>
             <Link>
               {" "}
-              <span className="ml-2"> Schedule A Call</span>
+              <span className="ml-2 text-white"> Schedule A Call</span>
             </Link>
           </div>
         </div>
