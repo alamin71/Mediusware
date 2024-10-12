@@ -120,9 +120,9 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* new section */}
+      {/* bottom image section */}
       <section class="justify-between bg-base-200 py-5 border-b-2 border-dotted border-gray-500 mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-10 gap-3 ml-2 mr-2">
+        <div class="grid grid-cols-1  md:grid-cols-10 gap-3 ml-2 mr-2">
           <div>
             <img
               src={footerImg1}

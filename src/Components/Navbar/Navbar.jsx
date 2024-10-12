@@ -356,13 +356,13 @@ const Navbar = () => {
 
       {menuOpen && (
         <>
-          <div className="absolute top-[70px] left-0 pt-1 pb-8  bg-white rounded-md shadow-md md:hidden">
+          <div className="absolute top-[70px] left-0 pt-1 pb-5  bg-white rounded-md shadow-md md:hidden">
             <ul className="flex flex-col items-center">
               {links}
               {links2}
             </ul>
           </div>
-          <div className="absolute mb-[-455px] -ml-3">
+          <div className="absolute mb-[-480px] -ml-3">
             <NavLink to="/startFree">
               <button className="btn bg-customSubmitBtnBg text-white text-sm p-3 rounded-lg px-6 items-center mt-1 mb-1 hover:bg-blue-600 border-none transition">
                 Start Free Trial{" "}
