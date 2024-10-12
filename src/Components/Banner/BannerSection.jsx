@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import LinkedinBtn from "../LinkdinBtn/LinkedinBtn";
 
 const BannerSection = () => {
   const [bannerData, setBannerData] = useState(null);
@@ -36,19 +37,24 @@ const BannerSection = () => {
   const { headline, US, Today, subHeadline, image } = bannerData;
 
   return (
-    <div className="flex flex-col md:flex-row items-center bg-customFormShadowBg p-10">
-      <div className="flex-1 text-gray-800 font-sans mb-6 md:mb-0">
-        <h1 className="text-6xl font-bold mb-4">
-          {headline} <span className="text-customGreen">{US}</span>
-          <br />
-          <span className="text-customGreen">{Today}</span>
-        </h1>
-        <p className="text-lg mb-6">{subHeadline}</p>
+    <>
+      <div className="flex flex-col md:flex-row items-center bg-customFormShadowBg p-10">
+        <div className="flex-1 text-gray-800 font-sans mb-6 md:mb-0">
+          <p class="font-bold text-[32px] leading-[44px] text-primary-1 lg:text-[60px] lg:leading-[65px] 2xl:text-[80px] 2xl:leading-[90px] 2xl:uppercase">
+            {headline} <span class="text-customGreen">{US}</span>
+            <br />
+            <span className="text-customGreen">{Today}</span>
+          </p>
+          <h4 class="text-[#344054] font-medium text-base pt-4 pb-7 2xl:text-[24px]">
+            {subHeadline}
+          </h4>
+        </div>
+        <div className="flex-1">
+          <img src={image.src} alt={image.alt} className="max-w-full h-auto" />
+        </div>
       </div>
-      <div className="flex-1">
-        <img src={image.src} alt={image.alt} className="max-w-full h-auto" />
-      </div>
-    </div>
+      <LinkedinBtn />
+    </>
   );
 };
 

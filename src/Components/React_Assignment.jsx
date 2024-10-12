@@ -19,6 +19,7 @@ const React_Assignment = () => {
   const [isFormValid, setIsFormValid] = useState(false);
   const [selectedServices, setSelectedServices] = useState([]);
   const [selectedBudget, setSelectedBudget] = useState("");
+  const [showToast, setShowToast] = useState(false);
 
   // Function to trigger file input click
   const handleButtonClick = (e) => {
@@ -100,6 +101,10 @@ const React_Assignment = () => {
     setFileError(""); // Clear file error message
     setSelectedServices([]); // Reset selected services
     setSelectedBudget(""); // Reset selected budget
+
+    // Call the toast function only when form is valid
+    setShowToast(true); // Toast message show
+    setTimeout(() => setShowToast(false), 3000);
   };
 
   const handleInputChange = (e) => {
@@ -296,9 +301,16 @@ const React_Assignment = () => {
               Send Inquiry{" "}
               <img src={SendBtn} alt="SendBtn" className="ml-2 inline-block" />
             </button>
+            {showToast && (
+              <div className="toast toast-top">
+                <div className="alert alert-success">
+                  <span>Inquiry sent successfully !!!.</span>
+                </div>
+              </div>
+            )}
           </form>
         </div>
-        {/*.............. 
+        {/*..............
         Contact Details Section
          .............*/}
         <div className="w-full md:w-1/3 p-4 text-black">

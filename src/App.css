@@ -1,11 +1,19 @@
 body {
   background-color: white;
 }
-.menu li > *:not(ul, .menu-title, details, .btn):active,
-.menu li > *:not(ul, .menu-title, details, .btn).active,
-.menu li > details > summary:active {
-  --tw-bg-opacity: 1;
-  background-color: white !important;
-  --tw-text-opacity: 1;
-  color: #000;
+@keyframes zoom {
+  0% {
+    transform: scale(1); /* Default size */
+  }
+  50% {
+    transform: scale(1.3); /* Zoom in by 20% */
+  }
+  100% {
+    transform: scale(1); /* Back to default size */
+  }
+}
+
+.linkedin-icon {
+  animation: zoom 0.5s infinite; /* Infinite zoom effect */
+  transition: transform 0.1s ease-in-out;
 }
