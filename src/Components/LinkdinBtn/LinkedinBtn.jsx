@@ -2,19 +2,18 @@ import React from "react";
 
 const LinkedinBtn = () => {
   return (
-    <div class="fixed top-52 right-0 flex flex-col space-y-3 z-50">
+    <div class="fixed top-52 right-0 flex flex-col space-y-3 z-50 ">
       <a
         target="_blank"
         class="bg-[#0060AF] py-3 px-4 rounded-l-lg shadow-lg text-white "
         href="https://www.linkedin.com/company/mediusware-ltd/mycompany/"
       >
         <svg
-          className="linkedin-icon"
+          className="animate-zoom"
           stroke="currentColor"
           fill="currentColor"
           stroke-width="0"
           viewBox="0 0 24 24"
-          class=""
           height="24"
           width="24"
           xmlns="http://www.w3.org/2000/svg"
