@@ -3,6 +3,7 @@ import logo from "../../assets/Images/Logo.png";
 import SendBtn from "../../assets/Images/SendBtn.png";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+// import MobileNav from "../MobileNav/MobileNav";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false); // state to toggle menu
@@ -15,8 +16,8 @@ const Navbar = () => {
     <>
       {/* Dropdown - Company */}
       <li className="relative group">
-        <Link className="relative flex items-center group pr-2">
-          <span className="pb-1 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
+        <Link className="relative flex items-center group px-3">
+          <span className="py-3 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
             Company
           </span>
           <svg
@@ -39,7 +40,7 @@ const Navbar = () => {
         <ul
           className={`absolute ${
             menuOpen
-              ? "ml-[146px] -top-4 pt-1 bg-gray-100 overflow-y-visible md:ml-0"
+              ? "ml-[178px] -top-2 pt-1 bg-gray-100 overflow-y-visible md:ml-0"
               : ""
           } hidden group-hover:grid bg-white rounded-lg text-black shadow-lg mt-3 py-6 w-svw grid-cols-1 md:grid-cols-5 gap-4 p-4`}
         >
@@ -90,7 +91,7 @@ const Navbar = () => {
       {/* Dropdown - Services */}
       <li className="relative group">
         <Link className="relative flex items-center group px-4">
-          <span className="pb-1 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
+          <span className="py-3 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
             Services
           </span>
           <svg
@@ -112,7 +113,7 @@ const Navbar = () => {
         {/* Dropdown Menu */}
         <ul
           className={`absolute ${
-            menuOpen ? "ml-[150px] -top-3 pt-1 overflow-y-visible md:ml-0" : ""
+            menuOpen ? "ml-[180px] -top-3 pt-1 overflow-y-visible md:ml-0" : ""
           } hidden group-hover:grid bg-white rounded-lg text-black shadow-lg mt-3 py-6 w-svw grid-cols-1 md:grid-cols-5 gap-4 p-4`}
         >
           <div>
@@ -162,7 +163,7 @@ const Navbar = () => {
       {/* Dropdown - Hire Developers */}
       <li className="relative group">
         <Link className="relative flex items-center group px-4">
-          <span className="pb-1 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
+          <span className="py-3 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
             Hire Developers
           </span>
           <svg
@@ -235,7 +236,7 @@ const Navbar = () => {
       {/* Dropdown - Industries */}
       <li className="relative group">
         <Link className="relative flex items-center group px-4">
-          <span className="pb-1 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
+          <span className="py-3 text-black transition ease-in-out duration-300 group-hover:text-customGreen relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-all after:duration-300 group-hover:after:w-full">
             Industries
           </span>
           <svg
@@ -257,7 +258,7 @@ const Navbar = () => {
         {/* Dropdown Menu */}
         <ul
           className={`absolute ${
-            menuOpen ? "ml-[156px] -top-3 pt-1 overflow-y-auto md:ml-0" : ""
+            menuOpen ? "ml-[180px] -top-2 pt-1 overflow-y-auto md:ml-0" : ""
           } hidden group-hover:grid bg-white rounded-lg text-black shadow-lg mt-3 py-6 w-svw grid-cols-1 md:grid-cols-4 gap-4 p-4`}
         >
           <div>
@@ -306,16 +307,16 @@ const Navbar = () => {
 
   const links2 = (
     <>
-      <li className="px-4">
+      <li className="px-4 py-3">
         <NavLink to="/portfolio">
-          <span className="relative pb-1 text-black hover:text-customGreen transition ease-in-out duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-width after:duration-300">
+          <span className="relative content-center text-black hover:text-customGreen transition ease-in-out duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-width after:duration-300">
             Portfolio
           </span>
         </NavLink>
       </li>
-      <li className="pl-2">
+      <li className="px-3 py-3">
         <NavLink to="/academy">
-          <span className="relative pb-1 text-black hover:text-customGreen transition ease-in-out duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-width after:duration-300">
+          <span className="relative text-black hover:text-customGreen transition ease-in-out duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-customGreen after:transition-width after:duration-300">
             Academy
           </span>
         </NavLink>
@@ -357,12 +358,13 @@ const Navbar = () => {
       {menuOpen && (
         <>
           <div className="absolute top-[70px] left-0 pt-1 pb-5  bg-white rounded-md shadow-md md:hidden">
-            <ul className="flex flex-col items-center">
+            <ul className="flex flex-col pr-72 pl-3">
               {links}
               {links2}
             </ul>
+            {/* <MobileNav /> */}
           </div>
-          <div className="absolute mb-[-480px] -ml-3">
+          <div className="absolute mb-[-740px] ml-2">
             <NavLink to="/startFree">
               <button className="btn bg-customSubmitBtnBg text-white text-sm p-3 rounded-lg px-6 items-center mt-1 mb-1 hover:bg-blue-600 border-none transition">
                 Start Free Trial{" "}
