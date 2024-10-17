@@ -3,6 +3,7 @@ import React from "react";
 import BannerSection from "../Banner/BannerSection";
 import CompanyLocation from "../CompanyLocation/CompanyLocation";
 import React_Assignment from "../React_Assignment";
+import TeamworkBannerCarousel from "../TeamworkBannerCarousel/TeamworkBannerCarousel";
 // import TopBar from "../TopBar/TopBar";
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
       {/* <TopBar /> */}
       <BannerSection />
       <React_Assignment />
+      <TeamworkBannerCarousel />
       <CompanyLocation />
     </div>
   );
