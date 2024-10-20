@@ -6,12 +6,11 @@ import carouselLogo1 from "../../assets/Images/carouselLogo1.png";
 import CarouselIcon1 from "../../assets/Images/CarouselIcon1.png";
 import CarouselIcon2 from "../../assets/Images/CarouselIcon2.png";
 import CarouselIcon3 from "../../assets/Images/CarouselIcon3.png";
-import CarouselIcon4 from "../../assets/Images/CarouselIcon4.png";
 
 const CarouselBanner = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [prevScrollPosition, setPrevScrollPosition] = useState(0); // Track previous scroll position
-  const [scrollDirection, setScrollDirection] = useState("down"); // Track scroll direction
+  const [prevScrollPosition, setPrevScrollPosition] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState("down");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,31 +25,23 @@ const CarouselBanner = () => {
 
       setScrollPosition(position);
       setPrevScrollPosition(position);
-
-      // Prevent further carousel scrolling after last slide
-      const maxScroll = window.innerHeight * 6; // Assuming 5 slides
-      if (position >= maxScroll) {
-        window.removeEventListener("scroll", handleScroll);
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPosition]); // Add prevScrollPosition as dependency
+  }, [prevScrollPosition]);
 
   const calculateTransform = () => {
-    const slideWidth = 75; // Each slide width is 75vw
-    const numSlides = 6; // Update this based on the total number of slides
-    const maxScroll = window.innerHeight * numSlides;
-    const percentage = Math.min(scrollPosition / maxScroll, 1);
+    const slideWidth = 75; // Each slide's width in vw
+    const numSlides = 6; // Number of slides
+    const maxScroll = window.innerHeight * numSlides; // Max scroll height based on slides
+    const percentage = Math.min(scrollPosition / maxScroll, 1); // Scroll percentage
 
-    // Adjust the transform based on scroll direction
-    const transformValue =
-      scrollDirection === "down"
-        ? `translateX(-${percentage * (numSlides - 1) * slideWidth}vw)`
-        : `translateX(${percentage * (numSlides - 1) * slideWidth}vw)`;
+    const transformValue = `translateX(-${
+      percentage * (numSlides - 1) * slideWidth
+    }vw)`;
 
     return transformValue;
   };
