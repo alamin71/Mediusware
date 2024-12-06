@@ -7,7 +7,7 @@ const BannerSection = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetching the JSON data
+    // Fetching JSON data
     const fetchData = async () => {
       try {
         const response = await fetch("bannerData.json");

@@ -6,6 +6,7 @@ import React_Assignment from "../React_Assignment";
 // import TeamworkBannerCarousel from "../TeamworkBannerCarousel/TeamworkBannerCarousel";
 // import Test from "../TEST/Test";
 import CarouselBanner from "../Test/CarouselBanner";
+import ContactForm from "../ContactForm/ContactForm";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <React_Assignment />
       <CarouselBanner />
       {/* <TeamworkBannerCarousel /> */}
+      <ContactForm />
       <CompanyLocation />
       {/* <Test /> */}
     </div>
